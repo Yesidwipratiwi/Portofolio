@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Yesi Dwi Pratiwi</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #f0f8ff;
+      color: #333;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+      transition: background 0.4s, color 0.4s;
+    }
+
+    /* Dark mode */
+    body.dark {
+      background: #1a1f2e;
+      color: #e6f0ff;
+    }
+
+    body.dark .card {
+      background: #24304a;
+      box-shadow: 0 4px 12px rgba(173,216,230,0.1);
+    }
+
+    body.dark nav {
+      background: #0d1420;
+    }
+
+    body.dark footer {
+      background: #0d1420;
+    }
+
+    body.dark a {
+      color: #85c1ff;
+    }
+
+    /* Header */
+    header {
+      background: linear-gradient(135deg, #4da6ff, #85c1ff);
+      color: white;
+      text-align: center;
+      padding: 60px 20px;
+      position: relative;
+    }
+
+    header img {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      border: 5px solid white;
+      object-fit: cover;
+      margin-bottom: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+    }
+
+    header img:hover {
+      transform: scale(1.1);
+    }
+
+    header h1 {
+      font-size: 2.5em;
+    }
+
+    header p {
+      margin-top: 10px;
+      font-size: 1.2em;
+    }
+
+    /* Dark mode toggle button */
+    .toggle-btn {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      background: #fff;
+      border: none;
+      border-radius: 20px;
+      padding: 8px 16px;
+      cursor: pointer;
+      font-weight: bold;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+      transition: background 0.3s;
+      color: #4da6ff;
+    }
+
+    .toggle-btn:hover {
+      background: #e6f3ff;
+    }
+
+    body.dark .toggle-btn {
+      background: #24304a;
+      color: #fff;
+    }
+
+    /* Navbar */
+    nav {
+      background: #4da6ff;
+      display: flex;
+      justify-content: center;
+      padding: 12px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #e6f3ff;
+    }
+
+    /* Section */
+    section {
+      max-width: 1000px;
+      margin: auto;
+      padding: 50px 20px;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeUp 1s forwards;
+    }
+
+    section:nth-of-type(2) { animation-delay: 0.2s; }
+    section:nth-of-type(3) { animation-delay: 0.4s; }
+    section:nth-of-type(4) { animation-delay: 0.6s; }
+    section:nth-of-type(5) { animation-delay: 0.8s; }
+    section:nth-of-type(6) { animation-delay: 1s; }
+
+    @keyframes fadeUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      color: #4da6ff;
+      border-bottom: 2px solid #4da6ff;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(77,166,255,0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 18px rgba(77,166,255,0.3);
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    ul li {
+      margin: 10px 0;
+    }
+
+    /* Footer */
+    footer {
+      background: #4da6ff;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 30px;
+    }
+
+    footer a {
+      color: #e6f3ff;
+      margin: 0 10px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    footer a:hover {
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <!-- Ganti 'profile.jpg' dengan foto profil kamu -->
+    <img src="WhatsApp Image 2025-10-06 at 10.36.05.jpeg" alt="Foto Profil Yesi">
+    <button class="toggle-btn" onclick="toggleDarkMode()">🌙 Dark</button>
+    <h1>Yesi Dwi Pratiwi</h1>
+    <p>Fresh Graduate | Digital Marketing | google collab</p>
+  </header>
+
+  <nav>
+    <a href="#profil">Profil</a>
+    <a href="#pendidikan">Pendidikan</a>
+    <a href="#pengalaman">Pengalaman</a>
+    <a href="#proyek">Proyek</a>
+    <a href="#skills">Skills</a>
+    <a href="#kontak">Kontak</a>
+  </nav>
+
+  <section id="profil">
+    <h2>Profil</h2>
+    <div class="card">
+      <p>Saya adalah fresh graduate jurusan sistem informasi dari Universitas Prima Indonesia dan memiliki IPK 3.83.
+         Memiliki kemampuan di bidang analisis data,digital marketing, serta UI/UX design. 
+         Berpengalaman dalam berbagai proyek kampus berbasis web & digital marketing.</p>
+    </div>
+  </section>
+
+  <section id="pendidikan">
+    <h2>Pendidikan</h2>
+    <div class="card">
+      <ul>
+        <li><b>Universitas Prima Indonesia</b> (2021 - 2025) - S1 Sistem Informasi, IPK 3.83</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="pengalaman">
+    <h2>Pengalaman</h2>
+    <div class="card">
+      <ul>
+        <li><b>PT Lidan Indah Abadi</b> (Agustus 2023 – Des 2023) - Admin</li>
+        <li><b>PT Infinity</b> (Maret 2024 – Juni 2024) - Digital Marketing</li>
+        <li><b>Bank Indonesia</b> (September 2024 – Oktober 2024) - Sp Non Tunai</li>
+        
+      </ul>
+    </div>
+  </section>
+
+  <section id="proyek">
+    <h2>Proyek</h2>
+    <div class="card">
+      <ul>
+        <li>UI/UX Keliling Sumut (Figma)</li>
+        
+      </ul>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="card">
+      <p><b>Technical:</b> HTML, Canva, Capcut, MS Office, Figma, SPSS</p>
+      <p><b>Soft Skills:</b> Public Speaking, Content Planning, Teamwork, Copywriting</p>
+      <p><b>Languages:</b> Indonesia (Aktif), Inggris (Pasif)</p>
+    </div>
+  </section>
+
+  <section id="kontak">
+    <h2>Kontak</h2>
+    <div class="card">
+      <p>Email: <a href="yesidwipratiwi0@gmail.com">yesidwipratiwi0gamil.com</a></p>
+      <p>Phone: +6282174743134</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>©️ 2025 - Yesi Dwi Pratiwi</p>
+  </footer>
+
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark');
+      const btn = document.querySelector('.toggle-btn');
+      if (document.body.classList.contains('dark')) {
+        btn.textContent = "☀️ Light";
+      } else {
+        btn.textContent = "🌙 Dark";
+      }
+    }
+  </script>
+</body>
+</html>
